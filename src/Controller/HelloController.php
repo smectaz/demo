@@ -9,9 +9,12 @@ use Symfony\Component\Routing\Generator\UrlGenerator;
 
 class HelloController extends AbstractController
 {
-    #[Route('/autre/{name}', methods:['GET'], requirements:['name' => '[a-z]+'], name:'hello')]
-    
-public function index(string $name): Response
+    #[Route(
+        '/autre/{name}', 
+        methods:['GET'], 
+        requirements:['name' => '[a-z]+'], name:'hello'
+    )]
+    public function index(string $name): Response
     {
 
     dump($this->generateUrl(
@@ -34,3 +37,4 @@ public function index(string $name): Response
     ]);
 }
 }
+

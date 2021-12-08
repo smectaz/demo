@@ -1,28 +1,7 @@
- <html>
-    <body>
-        <h1>{{name}}</h1>
-        {{ student.firstname}} {{student.lastname}}
-        {% if name == 'nicolas'%}
-            bravo
-        {% else %}
-            perdu
-        {% endif %}    
-        {{ student[key ~ 'name']}}
-        <pre>
-        {% for letter in ['a','b', 'c'] %}
-            {{loop.index0}}
-            {{loop.index}}
-            {{loop.first}}
-            {{loop.last}}
-            {{letter}}
-        {% endfor %}
-        </pre>
-        {{"hello world" | replace( {'world': 'team'}) }}
-        {{date | date("d/m/Y") }}
+{% extends "base.html.twig" %}
 
-        {% for article in articles %}
-            {{ articles.title}}
-        {% else %}
-            aucun
-        {% endfor %}
-</html>
+{% block body %}
+    {{ block('title') }} {{ parent()}} ou la {{parent()}}
+
+{% endblock %}
+
