@@ -1,7 +1,25 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    {{ block('title') }} {{ parent()}} ou la {{parent()}}
+    {{ block('title') }} {{ parent()}} 
+    <p>fonction toggle dans index</p>
+    <div data-controller="toggle">
+            <h2 data-action="click->toggle#process">Question</h2>
+            <p data-toggle-target="answer" style="overflow: hidden">lorem ipsum dolor sit, Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur omnis incidunt a fugiat. Sed accusantium quaerat ducimus voluptates? Eius vero nesciunt tempore accusantium quasi exercitationem magni voluptas officia molestiae. Voluptatem!
+            Aliquam, porro distinctio quis non commodi aperiam voluptatibus facere vitae laboriosam corporis aspernatur saepe suscipit. Labore at beatae, obcaecati rem nemo quis cum quibusdam explicabo nulla sunt harum porro exercitationem!</p>
+    </div>
+
+    <div data-controller="toggle">
+            <h2 data-action="click->toggle#process">Question</h2>
+            <p data-toggle-target="answer" style="overflow: hidden">lorem ipsum dolor sit, Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur omnis incidunt a fugiat. Sed accusantium quaerat ducimus voluptates? Eius vero nesciunt tempore accusantium quasi exercitationem magni voluptas officia molestiae. Voluptatem!
+            Aliquam, porro distinctio quis non commodi aperiam voluptatibus facere vitae laboriosam corporis aspernatur saepe suscipit. Labore at beatae, obcaecati rem nemo quis cum quibusdam explicabo nulla sunt harum porro exercitationem!</p>
+    </div>
+
+    <div data-controller="toggle">
+            <h2 data-action="click->toggle#process">Question</h2>
+            <p data-toggle-target="answer" style="overflow: hidden">lorem ipsum dolor sit, Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur omnis incidunt a fugiat. Sed accusantium quaerat ducimus voluptates? Eius vero nesciunt tempore accusantium quasi exercitationem magni voluptas officia molestiae. Voluptatem!
+            Aliquam, porro distinctio quis non commodi aperiam voluptatibus facere vitae laboriosam corporis aspernatur saepe suscipit. Labore at beatae, obcaecati rem nemo quis cum quibusdam explicabo nulla sunt harum porro exercitationem!</p>
+    </div>
 
 {% endblock %}
 
