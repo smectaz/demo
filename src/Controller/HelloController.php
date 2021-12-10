@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\AuthorRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,12 +11,17 @@ use Symfony\Component\Routing\Generator\UrlGenerator;
 class HelloController extends AbstractController
 {
     #[Route(
-        '/autre/{name}', 
-        methods:['GET'], 
-        requirements:['name' => '[a-z]+'], name:'hello'
+        '/autre/{name}',
+        methods:['GET'],
+        requirements:['name' => '[a-z]+'],
+        name:'hello'
+
     )]
-    public function index(string $name): Response
+function index(string $name, AuthorRepository $authorRepository): Response
     {
+
+    dump($authorRepository->findAll());
+    die;
 
     dump($this->generateUrl(
         'hello',
@@ -37,4 +43,3 @@ class HelloController extends AbstractController
     ]);
 }
 }
-
